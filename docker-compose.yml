@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: chainsleuth-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: chainsleuth
+      POSTGRES_PASSWORD: chainsleuth_password
+      POSTGRES_DB: chainsleuth_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chainsleuth -d chainsleuth_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chainsleuth-backend
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://chainsleuth:chainsleuth_password@db:5432/chainsleuth_db
+      - ENVIRONMENT=production
+      - EVM_RPC_URL=https://rpc.ankr.com/eth
+      - SEPOLIA_RPC_URL=https://rpc.ankr.com/eth_sepolia
+      - BASE_RPC_URL=https://mainnet.base.org
+      - LLM_PROVIDER=heuristic
+      - VECTOR_STORE=in_memory
+      - FRONTEND_URL=http://localhost
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: chainsleuth-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+volumes:
+  postgres_data:

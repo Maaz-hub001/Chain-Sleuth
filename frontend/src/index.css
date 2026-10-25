@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sleuth-950 text-slate-100 font-sans antialiased selection:bg-cyanAccent-500 selection:text-white min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Custom investigator scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2d4a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Cybernetic grid overlay for graphs and canvases */
+.cyber-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 45, 74, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 45, 74, 0.25) 1px, transparent 1px);
+}
+
+/* React Flow dark-mode overrides */
+.react-flow__background {
+  background-color: #090d16 !important;
+}
+
+.react-flow__controls {
+  background: #0d1424 !important;
+  border: 1px solid #1e2d4a !important;
+  border-radius: 8px !important;
+}
+
+.react-flow__controls button {
+  background: #0d1424 !important;
+  border-bottom: 1px solid #1e2d4a !important;
+  color: #94a3b8 !important;
+}
+
+.react-flow__controls button:hover {
+  background: #111c32 !important;
+  color: #38bdf8 !important;
+}

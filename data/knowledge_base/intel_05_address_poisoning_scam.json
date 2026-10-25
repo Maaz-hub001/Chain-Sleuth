@@ -1,0 +1,11 @@
+{
+  "id": "intel-doc-005",
+  "title": "Address Poisoning & Vanity Vanity Zero-Value Transfer Exploits",
+  "publisher": "Ethereum Security Community / ChainSleuth Intelligence",
+  "source_url": "https://ethereum.org/en/developers/docs/security/",
+  "publication_date": "2023-01-12",
+  "document_type": "security_brief",
+  "trust_classification": "verified_research",
+  "summary": "Mechanics of zero-value token transfer spam generating fake transaction history with vanity addresses matching victims' first and last characters.",
+  "content": "Address poisoning is an evasion and deception tactic where attackers generate vanity addresses that share the same leading 4-6 characters and trailing 4-6 characters as a victim's frequent counterparty. The scammer triggers a 0-value ERC-20 Transfer event (often abusing poorly implemented token contracts or executing valid 0-value transfers) from or to the victim's address. When the victim subsequently copies an address from their wallet transaction history without checking the entire 42-character hex string, funds are mistakenly routed to the attacker. In graph analysis, poisoned addresses exhibit high incoming 0-value transfer fan-out with minimal to zero subsequent native gas expenditure."
+}

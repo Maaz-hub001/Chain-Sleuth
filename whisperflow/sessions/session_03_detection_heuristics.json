@@ -1,0 +1,58 @@
+{
+  "session_id": "session-03",
+  "title": "Deterministic Heuristic Detection Engine",
+  "timestamp": "2026-10-25T14:38:15Z",
+  "duration_seconds": 412,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:04",
+      "raw_spoken_text": "Whisper flow, let's build the fraud detection heuristics. We need six deterministic detector classes rather than relying on an LLM to guess. First is KnownEntityDetector for OFAC sanctioned addresses, known bridges, and exchange hot wallets.",
+      "cleaned_intent": "Implement KnownEntityDetector reading verified labeled entity database.",
+      "confidence": 0.990,
+      "generated_artifacts": ["backend/app/services/detectors.py", "data/fixtures/known_entities.json"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:18",
+      "raw_spoken_text": "Second detector is MixerInteractionDetector. Look for direct transfers or smart contract calls to Tornado Cash pools or Railgun contracts. Severity should be critical.",
+      "cleaned_intent": "Implement MixerInteractionDetector for privacy pool and mixer interactions.",
+      "confidence": 0.988,
+      "generated_artifacts": ["backend/app/services/detectors.py"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:30",
+      "raw_spoken_text": "Third detector is RapidPassthroughDetector. This should flag peel chain money laundering where an incoming transaction is followed by an outgoing transfer within three hundred seconds for more than eighty five percent of the received value.",
+      "cleaned_intent": "Implement RapidPassthroughDetector for time-windowed peel chain analysis.",
+      "confidence": 0.983,
+      "generated_artifacts": ["backend/app/services/detectors.py"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:03:52",
+      "raw_spoken_text": "Fourth and fifth detectors: CircularFlowDetector to find wash trading loops in the transaction graph using Tarjan's or DFS cycles, and HighGasSpikeDetector to identify priority fee bribery during front-running or exploit drainage.",
+      "cleaned_intent": "Implement CircularFlowDetector and HighGasSpikeDetector.",
+      "confidence": 0.981,
+      "generated_artifacts": ["backend/app/services/detectors.py"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:05:10",
+      "raw_spoken_text": "Sixth detector is ContractInteractionDetector to spot suspicious interactions with unverified zero-byte bytecode contracts or phishing drains.",
+      "cleaned_intent": "Implement ContractInteractionDetector.",
+      "confidence": 0.986,
+      "generated_artifacts": ["backend/app/services/detectors.py"]
+    },
+    {
+      "step": 6,
+      "audio_offset": "00:06:14",
+      "raw_spoken_text": "Every detector must output structured findings with unique evidence ids, confidence scores, observed facts, and counterevidence so false positives can be contested.",
+      "cleaned_intent": "Enforce evidence IDs, confidence basis, and counterevidence fields in all detector results.",
+      "confidence": 0.993,
+      "generated_artifacts": ["backend/app/schemas/investigation.py"]
+    }
+  ]
+}

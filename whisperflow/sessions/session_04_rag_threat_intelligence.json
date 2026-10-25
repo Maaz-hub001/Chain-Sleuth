@@ -1,0 +1,56 @@
+{
+  "session_id": "session-04",
+  "title": "Threat Intelligence Knowledge Base & Local RAG Vectorizer",
+  "timestamp": "2026-10-25T14:49:05Z",
+  "duration_seconds": 366,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:06",
+      "raw_spoken_text": "Whisper flow, we need a RAG pipeline for threat intelligence, but do not download multi gigabyte models like Hugging Face sentence transformers that crash or hang in low memory environments.",
+      "cleaned_intent": "Design zero-dependency local vectorization strategy for low-memory, offline environments.",
+      "confidence": 0.984,
+      "generated_artifacts": ["backend/app/services/rag_service.py"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:15",
+      "raw_spoken_text": "Implement a LocalHybridVectorizer class using murmur hash n-grams to map tokens into a fixed 128 dimension unit normalized vector, combined with BM25 keyword matching for term frequency scoring.",
+      "cleaned_intent": "Implement LocalHybridVectorizer combining 128-dim hashing embeddings with BM25 keyword scoring.",
+      "confidence": 0.976,
+      "generated_artifacts": ["backend/app/services/rag_service.py"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:30",
+      "raw_spoken_text": "Add five high quality authentic threat intelligence documents in data/knowledge_base: one for Tornado Cash sanctions and router topologies, one for Lazarus Group Ronin bridge laundering, one for Euler Finance flash loan exploit, one for Nomad bridge replay attacks, and one for ERC-20 permit phishing drains.",
+      "cleaned_intent": "Create curated threat intelligence JSON files covering major real-world EVM attack vectors.",
+      "confidence": 0.988,
+      "generated_artifacts": [
+        "data/knowledge_base/intel_01_tornado_cash.json",
+        "data/knowledge_base/intel_02_lazarus_ronin.json",
+        "data/knowledge_base/intel_03_euler_exploit.json",
+        "data/knowledge_base/intel_04_nomad_replay.json",
+        "data/knowledge_base/intel_05_permit_phishing.json"
+      ]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:04:10",
+      "raw_spoken_text": "Make sure the RAG service supports chunking, similarity ranking, and semantic snippet retrieval with document titles and source citations.",
+      "cleaned_intent": "Implement chunking and similarity search with citation metadata in RAG service.",
+      "confidence": 0.982,
+      "generated_artifacts": ["backend/app/services/rag_service.py"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:05:22",
+      "raw_spoken_text": "Create an API endpoint /api/v1/intelligence/query so the frontend and external agents can search threat intel directly.",
+      "cleaned_intent": "Expose REST endpoints for intelligence document queries and similarity searches.",
+      "confidence": 0.991,
+      "generated_artifacts": ["backend/app/api/intelligence.py"]
+    }
+  ]
+}

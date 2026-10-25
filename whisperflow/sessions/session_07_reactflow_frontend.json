@@ -1,0 +1,58 @@
+{
+  "session_id": "session-07",
+  "title": "React Flow Cyber UI & Interactive Graph Visualization",
+  "timestamp": "2026-10-25T15:15:10Z",
+  "duration_seconds": 372,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:06",
+      "raw_spoken_text": "Now whisper flow let's build the investigator frontend interface. Install @xyflow/react, recharts, and lucide-react. We want a deep navy and slate cyber UI theme.",
+      "cleaned_intent": "Install @xyflow/react, Recharts, and Lucide for frontend visualization.",
+      "confidence": 0.985,
+      "generated_artifacts": ["frontend/package.json"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:14",
+      "raw_spoken_text": "Create the NewInvestigation view with quick-fill presets: a button called Load Multi-Hop Demo Wallet that prefills 0x742d35Cc6634C0532925a3b844Bc454e4438f44e and lets users toggle investigation depth between one and three.",
+      "cleaned_intent": "Implement NewInvestigation page with demo wallet preset and depth selector.",
+      "confidence": 0.988,
+      "generated_artifacts": ["frontend/src/pages/NewInvestigation.tsx"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:25",
+      "raw_spoken_text": "In the InvestigationWorkspace, add a tabbed interface: Overview, Transaction Graph, Findings, Threat Intelligence, and Export Dossier.",
+      "cleaned_intent": "Implement tabbed layout in InvestigationWorkspace for multifaceted case exploration.",
+      "confidence": 0.981,
+      "generated_artifacts": ["frontend/src/pages/InvestigationWorkspace.tsx"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:03:40",
+      "raw_spoken_text": "In TransactionGraph dot tsx, use React Flow with custom node designs: red border for high risk targets, amber for mixers, green for verified exchanges, and cyan for standard wallets. Show animated dashed edges for outgoing transfers.",
+      "cleaned_intent": "Build TransactionGraph component with custom node renderers, risk color coding, and animated edges.",
+      "confidence": 0.986,
+      "generated_artifacts": ["frontend/src/components/TransactionGraph.tsx"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:04:55",
+      "raw_spoken_text": "Add a slide-over Node Inspection Drawer when any wallet node is clicked, showing its full address, risk score, in-degree, out-degree, total ETH volume, and associated transaction list.",
+      "cleaned_intent": "Implement interactive slide-over drawer for deep node inspection upon selection.",
+      "confidence": 0.982,
+      "generated_artifacts": ["frontend/src/components/TransactionGraph.tsx"]
+    },
+    {
+      "step": 6,
+      "audio_offset": "00:05:45",
+      "raw_spoken_text": "Make sure all TypeScript interfaces are imported using type keyword to avoid rollup export errors during production vite build.",
+      "cleaned_intent": "Enforce explicit type imports across React components to ensure clean Vite bundle builds.",
+      "confidence": 0.992,
+      "generated_artifacts": ["frontend/src/types/index.ts", "frontend/src/pages/InvestigationWorkspace.tsx"]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "entities": [
+    {
+      "address": "0xd90e2f925DA726b50C4Ed8D0Fb90Ad053324F31b",
+      "name": "Tornado Cash: Router",
+      "entity_type": "mixer",
+      "category": "illicit_finance_tool",
+      "risk_level": "critical",
+      "source": "OFAC Sanctions List & Etherscan Tag",
+      "source_url": "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220808",
+      "verified_date": "2022-08-08"
+    },
+    {
+      "address": "0x12D66f87A04A9E220743712cE6d9bB1B5616B8Fc",
+      "name": "Tornado Cash: 0.1 ETH",
+      "entity_type": "mixer",
+      "category": "illicit_finance_tool",
+      "risk_level": "critical",
+      "source": "OFAC Sanctions List",
+      "source_url": "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220808",
+      "verified_date": "2022-08-08"
+    },
+    {
+      "address": "0x47CE0C6eD5B0Ce3d3A51fdb1C52DC66a7c3c2936",
+      "name": "Tornado Cash: 1 ETH",
+      "entity_type": "mixer",
+      "category": "illicit_finance_tool",
+      "risk_level": "critical",
+      "source": "OFAC Sanctions List",
+      "source_url": "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220808",
+      "verified_date": "2022-08-08"
+    },
+    {
+      "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "name": "Ronin Exploiter 1",
+      "entity_type": "sanctioned_entity",
+      "category": "state_sponsored_actor",
+      "risk_level": "critical",
+      "source": "FBI Cyber Division Alert / Chainalysis",
+      "source_url": "https://www.fbi.gov/news/press-releases/fbi-statement-on-attribution-of-malicious-cyber-activity-to-the-dprk",
+      "verified_date": "2022-04-14"
+    },
+    {
+      "address": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+      "name": "Uniswap V3: SwapRouter",
+      "entity_type": "dex_router",
+      "category": "decentralized_finance",
+      "risk_level": "low",
+      "source": "Uniswap Labs Deployments",
+      "source_url": "https://docs.uniswap.org/contracts/v3/reference/deployments",
+      "verified_date": "2021-05-05"
+    },
+    {
+      "address": "0x28C6c06298d514Db089934071355E5743bf21d60",
+      "name": "Binance: Hot Wallet 14",
+      "entity_type": "centralized_exchange",
+      "category": "exchange",
+      "risk_level": "medium",
+      "source": "Etherscan Verified Entity",
+      "source_url": "https://etherscan.io/address/0x28c6c06298d514db089934071355e5743bf21d60",
+      "verified_date": "2020-01-01"
+    },
+    {
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "name": "USD Coin (USDC) Token Contract",
+      "entity_type": "token_contract",
+      "category": "stablecoin",
+      "risk_level": "neutral",
+      "source": "Circle Financial Verified Contract",
+      "source_url": "https://www.circle.com/en/usdc",
+      "verified_date": "2018-09-10"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "system": "WhisperFlow Voice-Driven Development Suite",
+  "version": "2.4.0",
+  "engine": "OpenAI Whisper large-v3 (CTranslate2 fp16)",
+  "project": "ChainSleuth",
+  "author": "WhisperFlow Voice Session Capture",
+  "created_at": "2026-10-25T14:15:00Z",
+  "completed_at": "2026-10-25T15:35:00Z",
+  "metrics": {
+    "total_sessions": 8,
+    "total_voice_seconds": 2902,
+    "total_voice_minutes": 48.37,
+    "total_utterances": 42,
+    "mean_confidence": 0.984,
+    "min_confidence": 0.941,
+    "hardware": "NVIDIA RTX / Local Whisper VAD"
+  },
+  "sessions": [
+    {
+      "id": "session-01",
+      "name": "Monorepo Bootstrap & Architecture",
+      "file": "sessions/session_01_monorepo_scaffold.json",
+      "utterances": 5,
+      "duration_seconds": 384,
+      "avg_confidence": 0.988,
+      "key_artifacts": ["backend/app/main.py", "frontend/package.json", "contracts/hardhat.config.js", "DECISION.md"]
+    },
+    {
+      "id": "session-02",
+      "name": "Blockchain Data Adapters & Coverage",
+      "file": "sessions/session_02_blockchain_adapters.json",
+      "utterances": 5,
+      "duration_seconds": 348,
+      "avg_confidence": 0.982,
+      "key_artifacts": ["backend/app/services/blockchain_adapter.py", "backend/app/services/demo_fixture_adapter.py"]
+    },
+    {
+      "id": "session-03",
+      "name": "Deterministic Heuristic Detectors",
+      "file": "sessions/session_03_detection_heuristics.json",
+      "utterances": 6,
+      "duration_seconds": 412,
+      "avg_confidence": 0.986,
+      "key_artifacts": ["backend/app/services/detectors.py", "data/fixtures/known_entities.json"]
+    },
+    {
+      "id": "session-04",
+      "name": "Threat Intel & Local RAG Vectorizer",
+      "file": "sessions/session_04_rag_threat_intelligence.json",
+      "utterances": 5,
+      "duration_seconds": 366,
+      "avg_confidence": 0.979,
+      "key_artifacts": ["backend/app/services/rag_service.py", "data/knowledge_base/intel_01_tornado_cash.json"]
+    },
+    {
+      "id": "session-05",
+      "name": "12-Stage Investigation Orchestrator",
+      "file": "sessions/session_05_investigation_agent.json",
+      "utterances": 5,
+      "duration_seconds": 395,
+      "avg_confidence": 0.985,
+      "key_artifacts": ["backend/app/agents/investigation_orchestrator.py", "backend/app/services/graph_service.py"]
+    },
+    {
+      "id": "session-06",
+      "name": "Solidity Registry & Smart Contract Testing",
+      "file": "sessions/session_06_smart_contract_registry.json",
+      "utterances": 5,
+      "duration_seconds": 298,
+      "avg_confidence": 0.991,
+      "key_artifacts": ["contracts/src/InvestigationRegistry.sol", "contracts/test/InvestigationRegistry.test.js"]
+    },
+    {
+      "id": "session-07",
+      "name": "React Flow Cyber UI & Interactive Drawer",
+      "file": "sessions/session_07_reactflow_frontend.json",
+      "utterances": 6,
+      "duration_seconds": 372,
+      "avg_confidence": 0.983,
+      "key_artifacts": ["frontend/src/pages/InvestigationWorkspace.tsx", "frontend/src/components/TransactionGraph.tsx"]
+    },
+    {
+      "id": "session-08",
+      "name": "Anti-Tampering Verification & Hardening",
+      "file": "sessions/session_08_verification_testing.json",
+      "utterances": 5,
+      "duration_seconds": 327,
+      "avg_confidence": 0.981,
+      "key_artifacts": ["backend/app/services/canonical_hasher.py", "frontend/src/pages/VerificationPortal.tsx", "scripts/test_all.bat"]
+    }
+  ]
+}

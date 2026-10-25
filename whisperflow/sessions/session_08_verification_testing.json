@@ -1,0 +1,50 @@
+{
+  "session_id": "session-08",
+  "title": "Anti-Tampering Verification, Test Suite & Hardening",
+  "timestamp": "2026-10-25T15:24:40Z",
+  "duration_seconds": 327,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:05",
+      "raw_spoken_text": "Whisper flow, let's implement the canonical report hashing service. In backend/app/services/canonical_hasher dot py, build a function that sorts all keys alphabetically, excludes volatile timestamps, formats with zero unnecessary whitespace, and generates a strict SHA-256 hash.",
+      "cleaned_intent": "Implement CanonicalReportHasher with deterministic JSON serialization and SHA-256 hashing.",
+      "confidence": 0.993,
+      "generated_artifacts": ["backend/app/services/canonical_hasher.py"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:10",
+      "raw_spoken_text": "Create the VerificationPortal page on the frontend at route /verify. Users should be able to paste an exported dossier or click Load Sample Dossier, and click Verify Authenticity to recalculate the hash.",
+      "cleaned_intent": "Build VerificationPortal page with instant client-side and server-side hash verification.",
+      "confidence": 0.985,
+      "generated_artifacts": ["frontend/src/pages/VerificationPortal.tsx"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:15",
+      "raw_spoken_text": "Make sure that if even a single character in the JSON dossier is modified, like changing an address or tampering with a risk score, the portal immediately displays a red Tampering Detected alert with the expected vs calculated hash.",
+      "cleaned_intent": "Implement visual cryptographic tamper detection and hash mismatch highlighting.",
+      "confidence": 0.987,
+      "generated_artifacts": ["frontend/src/pages/VerificationPortal.tsx"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:03:30",
+      "raw_spoken_text": "Write comprehensive pytest suites in backend/tests for validation, graph algorithms, all six detectors, RAG retrieval, the canonical hasher, and API endpoints. Make sure every single test passes.",
+      "cleaned_intent": "Implement 26 backend unit and integration tests with 100% pass rate.",
+      "confidence": 0.989,
+      "generated_artifacts": ["backend/tests/test_detectors.py", "backend/tests/test_graph.py", "backend/tests/test_api.py", "backend/tests/test_hasher.py"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:04:40",
+      "raw_spoken_text": "Create scripts/test_all dot bat so anyone on Windows can run all tests and builds with a single click. Test contracts, backend pytest, and frontend build.",
+      "cleaned_intent": "Create scripts/test_all.bat batch runner for all three testing tiers.",
+      "confidence": 0.982,
+      "generated_artifacts": ["scripts/test_all.bat"]
+    }
+  ]
+}

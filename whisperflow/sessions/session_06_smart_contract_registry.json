@@ -1,0 +1,50 @@
+{
+  "session_id": "session-06",
+  "title": "Solidity Registry & Smart Contract Verification",
+  "timestamp": "2026-10-25T15:07:45Z",
+  "duration_seconds": 298,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:04",
+      "raw_spoken_text": "Whisper flow, let's create the blockchain anchoring contract. We need a smart contract in contracts/src called InvestigationRegistry dot sol.",
+      "cleaned_intent": "Create InvestigationRegistry.sol smart contract in contracts/src.",
+      "confidence": 0.994,
+      "generated_artifacts": ["contracts/src/InvestigationRegistry.sol"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:05",
+      "raw_spoken_text": "The contract must store only bytes32 reportHash, reportId string, targetIdentifier string, reporter address, and timestamp uint256. Never store any personal data or raw investigation text on chain to avoid gdpr compliance issues and gas waste.",
+      "cleaned_intent": "Implement minimal on-chain evidence anchoring struct to minimize gas and ensure zero PII exposure.",
+      "confidence": 0.992,
+      "generated_artifacts": ["contracts/src/InvestigationRegistry.sol"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:12",
+      "raw_spoken_text": "Include an anchorReport function that checks reportHash is not bytes32 zero, ensures the report ID is not already registered, records the block timestamp, and emits a ReportAnchored event with indexed parameters.",
+      "cleaned_intent": "Implement anchorReport method with zero-hash check, collision prevention, and indexed event emission.",
+      "confidence": 0.989,
+      "generated_artifacts": ["contracts/src/InvestigationRegistry.sol"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:03:15",
+      "raw_spoken_text": "Write a public view function verifyReport that takes the reportId and an expectedHash, returning a boolean isValid and the anchor timestamp.",
+      "cleaned_intent": "Implement verifyReport view function for instant on-chain hash verification.",
+      "confidence": 0.993,
+      "generated_artifacts": ["contracts/src/InvestigationRegistry.sol"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:04:10",
+      "raw_spoken_text": "Write Hardhat unit tests in test/InvestigationRegistry.test.js covering successful anchoring, duplicate rejection, zero hash rejection, verification checks, and event emission. Run the tests to make sure 100 percent pass.",
+      "cleaned_intent": "Implement comprehensive Hardhat unit test suite for InvestigationRegistry.",
+      "confidence": 0.991,
+      "generated_artifacts": ["contracts/test/InvestigationRegistry.test.js"]
+    }
+  ]
+}

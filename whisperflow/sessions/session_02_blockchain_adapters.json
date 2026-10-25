@@ -1,0 +1,50 @@
+{
+  "session_id": "session-02",
+  "title": "Blockchain Data Adapters & Coverage Honesty",
+  "timestamp": "2026-10-25T14:26:10Z",
+  "duration_seconds": 348,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:08",
+      "raw_spoken_text": "Now whisper flow let's build the blockchain data ingestion layer. We need an abstract base adapter with get_transactions, get_balance, and get_contract_abi methods.",
+      "cleaned_intent": "Implement abstract BaseBlockchainAdapter with standardized async interface.",
+      "confidence": 0.985,
+      "generated_artifacts": ["backend/app/services/blockchain_adapter.py"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:25",
+      "raw_spoken_text": "For live data, implement a blockscout adapter because it has free public rest endpoints on ethereum and polygon without requiring an api key. But standard evm rpc nodes don't index historical transactions by wallet address without debug trace.",
+      "cleaned_intent": "Implement BlockscoutAdapter for free public indexing and document RPC tracing limitations.",
+      "confidence": 0.978,
+      "generated_artifacts": ["backend/app/services/blockscout_adapter.py"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:40",
+      "raw_spoken_text": "We need to be completely honest about data coverage. Build a coverage summary object that tracks provider name, blocks scanned, truncated transaction flags, and provider warnings. Never fake complete coverage if an rpc node only returns balance.",
+      "cleaned_intent": "Implement CoverageSummary schema and honest coverage labeling across all adapters.",
+      "confidence": 0.989,
+      "generated_artifacts": ["backend/app/schemas/investigation.py"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:04:02",
+      "raw_spoken_text": "Create a deterministic demo fixture adapter with realistic multi hop money laundering transactions: mixer deposits, rapid passthrough peel chains, and decentralized exchange swaps, so users can test offline with zero network lag.",
+      "cleaned_intent": "Build DemoFixtureAdapter with realistic multi-hop fraud scenarios.",
+      "confidence": 0.984,
+      "generated_artifacts": ["backend/app/services/demo_fixture_adapter.py", "data/fixtures/sample_investigation_wallet.json"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:05:15",
+      "raw_spoken_text": "Make sure the adapter router automatically routes demo addresses to the fixture adapter and any unknown ethereum address to blockscout and rpc.",
+      "cleaned_intent": "Create BlockchainRouter with fallback logic and address-based routing.",
+      "confidence": 0.982,
+      "generated_artifacts": ["backend/app/services/blockchain_adapter.py"]
+    }
+  ]
+}

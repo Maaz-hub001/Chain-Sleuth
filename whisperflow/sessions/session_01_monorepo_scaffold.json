@@ -1,0 +1,50 @@
+{
+  "session_id": "session-01",
+  "title": "Monorepo Bootstrap & Architectural Foundation",
+  "timestamp": "2026-10-25T14:15:32Z",
+  "duration_seconds": 384,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:05",
+      "raw_spoken_text": "Hey whisper flow let's start a new project called chain sleuth. We need a monorepo setup for an AI powered blockchain fraud investigation platform. Set up three folders: backend with fast api, frontend with vite react and typescript, and contracts with hardhat.",
+      "cleaned_intent": "Initialize monorepo layout with backend (FastAPI), frontend (Vite React TypeScript), and contracts (Hardhat).",
+      "confidence": 0.989,
+      "generated_artifacts": ["backend/", "frontend/", "contracts/", "README.md"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:12",
+      "raw_spoken_text": "Also make sure you create a decision dot md file right away. Any technical choice we make throughout the build should be documented there with context, decision, and consequence.",
+      "cleaned_intent": "Create DECISION.md file tracking all architectural and engineering decisions.",
+      "confidence": 0.992,
+      "generated_artifacts": ["DECISION.md"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:02:18",
+      "raw_spoken_text": "In the backend make sure we configure sqlalchemy to work with sqlite out of the box so anyone can test it with zero setup, but write the models cleanly so it supports postgresql later without breaking changes.",
+      "cleaned_intent": "Configure SQLAlchemy with SQLite default and clean dialect compatibility for PostgreSQL.",
+      "confidence": 0.987,
+      "generated_artifacts": ["backend/app/core/database.py", "backend/app/models/"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:03:45",
+      "raw_spoken_text": "Let's set up the frontend with tailwind css and lucide icons. Make sure the dark mode color scheme looks like a cyber intelligence command center, dark slate navy background, sky blue accents, and clean status indicators.",
+      "cleaned_intent": "Configure Tailwind CSS with cyber dark theme palette, Lucide icons, and modern typography.",
+      "confidence": 0.981,
+      "generated_artifacts": ["frontend/tailwind.config.js", "frontend/src/index.css"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:05:20",
+      "raw_spoken_text": "Remember our cardinal rule: everything must work offline without paid third party api keys. The synthesizer should have an expert deterministic default so no openai key is required to run the full app.",
+      "cleaned_intent": "Enforce zero-cost offline execution with deterministic synthesis engine default.",
+      "confidence": 0.991,
+      "generated_artifacts": ["backend/app/core/config.py", "backend/app/services/synthesizer.py"]
+    }
+  ]
+}

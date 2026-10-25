@@ -1,0 +1,11 @@
+{
+  "id": "intel-doc-002",
+  "title": "Anatomy of ERC-20 Permit & Approval Phishing Drainers (Inferno / Pink Drainer)",
+  "publisher": "ChainSleuth Threat Intel & Security Research",
+  "source_url": "https://eips.ethereum.org/EIPS/eip-2612",
+  "publication_date": "2023-09-14",
+  "document_type": "exploit_analysis",
+  "trust_classification": "verified_research",
+  "summary": "Technical analysis of malicious off-chain signatures (EIP-712 / Permit2) used to drain ERC-20 tokens and NFTs without direct on-chain approval transactions.",
+  "content": "Modern EVM wallet drainers rely heavily on EIP-2612 (Permit) and Uniswap Permit2 gasless signatures to siphon assets. Victims sign an off-chain message granting spender allowance to a malicious operator contract or intermediate sweep address. Once the signature is harvested: (1) The drainer operator triggers transferFrom() or permitBatch() from a funded relayer wallet. (2) Assets are immediately pulled into a temporary holding or transit address. (3) Assets are aggregated and swapped on decentralized exchanges (Uniswap, 1inch) for native ETH or stablecoins. (4) The proceeds are funneled through bridging protocols (e.g., Across, Hop, Stargate) or swept into mixer contracts within minutes to evade freeze lists."
+}

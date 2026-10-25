@@ -1,0 +1,50 @@
+{
+  "session_id": "session-05",
+  "title": "12-Stage Autonomous Investigation Engine",
+  "timestamp": "2026-10-25T14:58:20Z",
+  "duration_seconds": 395,
+  "whisper_model": "large-v3",
+  "transcription_language": "en-US",
+  "commands": [
+    {
+      "step": 1,
+      "audio_offset": "00:00:05",
+      "raw_spoken_text": "Now whisper flow let's build the core intelligence orchestrator. It shouldn't be a black box; it must execute twelve explicit stages that stream progress to the user.",
+      "cleaned_intent": "Build 12-stage sequential InvestigationOrchestrator pipeline with transparent stage tracking.",
+      "confidence": 0.990,
+      "generated_artifacts": ["backend/app/agents/investigation_orchestrator.py"]
+    },
+    {
+      "step": 2,
+      "audio_offset": "00:01:20",
+      "raw_spoken_text": "Define the twelve stages clearly: intake validation, provider health check, primary transaction ingestion, multi-hop neighbor expansion, graph topology construction, entity label resolution, heuristic fraud detection, threat intel RAG retrieval, risk score calculation, counterevidence evaluation, deterministic narrative synthesis, and canonical dossier serialization.",
+      "cleaned_intent": "Formalize the 12 stages in InvestigationStage enum and orchestrator pipeline.",
+      "confidence": 0.987,
+      "generated_artifacts": ["backend/app/schemas/investigation.py", "backend/app/agents/investigation_orchestrator.py"]
+    },
+    {
+      "step": 3,
+      "audio_offset": "00:03:00",
+      "raw_spoken_text": "In the graph service, calculate real graph metrics: in-degree, out-degree, total volume in and out, shortest paths, and cluster components using NetworkX.",
+      "cleaned_intent": "Implement GraphService using NetworkX to compute in/out degrees, flow volume, and topology metrics.",
+      "confidence": 0.984,
+      "generated_artifacts": ["backend/app/services/graph_service.py"]
+    },
+    {
+      "step": 4,
+      "audio_offset": "00:04:15",
+      "raw_spoken_text": "For risk scoring, use a capped weighted sum of finding severities: critical adds 40, high adds 25, medium adds 15, low adds 5, clamped between 0 and 100 with category labels like Severe, High, Medium, Low.",
+      "cleaned_intent": "Implement deterministic weighted risk score calculator with categorical classification.",
+      "confidence": 0.992,
+      "generated_artifacts": ["backend/app/agents/investigation_orchestrator.py"]
+    },
+    {
+      "step": 5,
+      "audio_offset": "00:05:30",
+      "raw_spoken_text": "Write the database persistence methods in the orchestrator so the investigation, wallet nodes, transaction edges, and findings are all committed atomically to the database.",
+      "cleaned_intent": "Implement atomic database persistence for investigations, graph nodes, edges, and findings.",
+      "confidence": 0.988,
+      "generated_artifacts": ["backend/app/agents/investigation_orchestrator.py"]
+    }
+  ]
+}

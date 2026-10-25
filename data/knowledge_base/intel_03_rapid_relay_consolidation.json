@@ -1,0 +1,11 @@
+{
+  "id": "intel-doc-003",
+  "title": "Laundering Topologies: Rapid Relay, Layering, and Smurfing Patterns",
+  "publisher": "Financial Action Task Force (FATF) / Web3 Security Consortium",
+  "source_url": "https://www.fatf-gafi.org/en/publications/Virtualassets/Virtual-assets-red-flag-indicators.html",
+  "publication_date": "2023-04-18",
+  "document_type": "typology_report",
+  "trust_classification": "verified_authority",
+  "summary": "Indicators of money laundering in blockchain ecosystems: peel chains, fan-out disbursement, and rapid transit wallets.",
+  "content": "Illicit actors utilize distinct graph topologies to obscure the lineage of stolen cryptocurrency. Key patterns include: (1) Peel Chains: A large sum is moved through a sequence of hops where at each hop a small amount is peeled off into a cash-out vector (e.g. peer-to-peer broker or instant exchange) while the remainder moves to a fresh address. (2) Rapid Relay (Transit Wallets): Addresses with brief activity windows (< 1 hour) that receive funds and immediately transfer 95%+ of the balance to downstream recipients. (3) Fan-Out Dispersion: Splitting a single large theft into dozens of sub-threshold transfers (smurfing) across intermediate addresses to evade automated exchange deposit alerts, subsequently followed by reconvergence (fan-in) into liquidity pools."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "intel-doc-001",
+  "title": "OFAC Sanctions & Behavioral Profile: Tornado Cash Mixing Protocols",
+  "publisher": "U.S. Department of the Treasury / ChainSleuth Security Advisory",
+  "source_url": "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions/20220808",
+  "publication_date": "2022-08-08",
+  "document_type": "advisory",
+  "trust_classification": "verified_authority",
+  "summary": "Technical and regulatory breakdown of cryptographic mixer contracts, anonymity pools, relayer patterns, and asset disassociation.",
+  "content": "Cryptographic mixers such as Tornado Cash utilize zero-knowledge proofs (zk-SNARKs) to break the on-chain link between depositing addresses and recipient addresses. Key behavioral characteristics of mixer interaction include: (1) Deposit transactions to known pool smart contracts (e.g., 0.1 ETH, 1 ETH, 10 ETH, 100 ETH fixed-denomination pools). (2) Anonymity sets where withdrawal is performed using a relayer network paying gas on behalf of fresh unlinked addresses. (3) Rapid multi-denomination deposits following large-scale protocol exploits or phishing campaigns to obscure funds before centralized exchange liquidation. While mixers provide privacy for legitimate users, compliance screening identifies direct deposits or withdrawals from sanctioned pool addresses as elevated risk under AML guidelines."
+}
